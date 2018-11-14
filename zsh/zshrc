@@ -5,3 +5,5 @@ source "${HOME}/.zmodules/aliases.zsh"
 source "${HOME}/.zmodules/fzf.zsh"
 source "${HOME}/.zmodules/git.zsh"
 source "${HOME}/.zmodules/navigation.zsh"
+
+[[ -f "${HOME}/.zshrc.local" ]] && source "${HOME}/.zshrc.local"
