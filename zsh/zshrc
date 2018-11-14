@@ -3,6 +3,7 @@ antibody bundle < "${HOME}/.zplugins"
 
 source "${HOME}/.zmodules/aliases.zsh"
 source "${HOME}/.zmodules/fzf.zsh"
+source "${HOME}/.zmodules/history.zsh"
 source "${HOME}/.zmodules/git.zsh"
 source "${HOME}/.zmodules/navigation.zsh"
 
