@@ -24,6 +24,7 @@ shortcut() {
 }
 
 [[ ! -d "${HOME}/src" ]] || shortcut src "${HOME}/src"
+[[ ! -d "${HOME}/src/dotfiles" ]] || shortcut dots "${HOME}/src/dotfiles"
 
 # If a command is issued that can’t be executed as a normal command,
 # and the command is the name of a directory, perform the cd command to that directory.
