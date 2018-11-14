@@ -1,0 +1,11 @@
+caarlos0/ports kind:path
+caarlos0/zsh-mkc
+mafredri/zsh-async
+rupa/z
+Tarrasch/zsh-bd
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
+sindresorhus/pure
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
