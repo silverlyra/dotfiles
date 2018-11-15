@@ -20,3 +20,15 @@ gcf() {
     commit=$(echo "$selection" | awk '{print $1}') &&
     if [[ -t 1 ]]; then git commit --fixup "$commit"; else echo $commit; fi
 }
+
+# git new (simplified git start)
+gn() {
+  git checkout master && git pull --rebase --no-tags && git checkout -b "$1"
+}
+
+# git roost (simplified git sync)
+gr() {
+  local br
+  br="$(git rev-parse --abbrev-ref HEAD)"
+  git checkout master && git pull --rebase --no-tags && git checkout "$br" && git rebase master
+}
