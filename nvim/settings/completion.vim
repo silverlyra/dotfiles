@@ -1,4 +1,4 @@
-set completeopt=noinsert,menuone,noselect
+set completeopt=menu,noselect
 
 " Wildmenu completion
 
@@ -23,5 +23,3 @@ set wildignore+=npm-debug.log
 set wildignore+=*.orig                           " Merge resolution files
 
 set wildignore+=build
-
-
