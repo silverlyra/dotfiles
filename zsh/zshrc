@@ -1,4 +1,8 @@
 source <(antibody init)
+
+export EDITOR=nvim
+export VISUAL="${EDITOR}"
+
 antibody bundle < "${HOME}/.zplugins"
 
 source "${HOME}/.zmodules/aliases.zsh"

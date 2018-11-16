@@ -5,6 +5,7 @@ alias c=cat
 alias g=git
 alias l=exa
 alias ll='exa -l'
+alias v=nvim
 
 # Git aliases
 
