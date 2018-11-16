@@ -1,5 +1,7 @@
 source <(antibody init)
 
+PURE_GIT_PULL=0 # disable automatic fetches by the shell prompt
+
 export EDITOR=nvim
 export VISUAL="${EDITOR}"
 
