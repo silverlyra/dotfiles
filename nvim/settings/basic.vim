@@ -49,3 +49,10 @@ endif
 
 let mapleader = ','
 let maplocalleader = '\\'
+
+augroup basic
+    au!
+
+    au FocusLost * :silent! wall
+    au VimResized * :wincmd =
+augroup END

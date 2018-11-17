@@ -67,6 +67,11 @@ Plug 'artur-shaik/vim-javacomplete2', {'for': ['java', 'jsp']}
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
 "
+" Terraform
+"
+Plug 'hashivim/vim-terraform'
+Plug 'juliosueiras/vim-terraform-completion'
+"
 " VimScript
 "
 

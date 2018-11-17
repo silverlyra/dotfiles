@@ -9,6 +9,7 @@ scriptencoding utf-8
 runtime settings/basic.vim
 runtime settings/completion.vim
 runtime settings/editing.vim
+runtime settings/filetypes.vim
 
 " Plugin management
 
@@ -35,6 +36,16 @@ runtime plugins/tree.vim
 runtime plugins/languages.vim
 
 call plug#end()
+
+call ncm2#register_source({'name' : 'terraform',
+            \ 'priority': 9,
+            \ 'subscope_enable': 1,
+            \ 'scope': ['hcl', 'terraform'],
+            \ 'mark': 'tf',
+            \ 'word_pattern': '[\w\-]+',
+            \ 'complete_pattern': '[^ *\t"{=$]\w*',
+            \ 'on_complete': ['ncm2#on_complete#omni', 'terraformcomplete#Complete'],
+            \ })
 
 " Mappings
 runtime map.vim

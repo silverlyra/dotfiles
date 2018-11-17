@@ -1,4 +1,4 @@
-set completeopt=menu,noselect
+set completeopt=menu,menuone,longest
 
 " Wildmenu completion
 

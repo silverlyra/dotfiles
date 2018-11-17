@@ -50,6 +50,12 @@ nmap <leader>. <c-^>
 " enable . command in visual mode
 vnoremap . :normal .<cr>
 
+" insert the directory of the current buffer in command line mode
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" sudo to write
+cmap w!! w !sudo tee % >/dev/null<Paste>
+
 " error navigation
 nnoremap ˚ :lnext<cr>zvzz
 nnoremap ¬ :lprevious<cr>zvzz
