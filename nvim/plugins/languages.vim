@@ -37,13 +37,6 @@ Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'mhartington/nvim-typescript', { 'for': 'typescript', 'do': './install.sh'  }
 
 "
-" Go
-"
-
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'ncm2/ncm2-go', { 'for': 'go' }
-
-"
 " Markdown
 "
 
