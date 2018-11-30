@@ -23,29 +23,24 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   augroup END
 endif
 
-call plug#begin('~/.local/share/nvim/plugged')
+call astral#begin()
+
+Plane 'completion'
+Plane 'find'
+Plane 'ui/statusline', {'colorscheme': 'one'}
+Plane 'ui/tree', {'position': 'right', 'follow': 1}
+
+Plane 'lang/go', {'gocode': '~/go/bin/gocode'}
+Plane 'lang/vim'
 
 runtime plugins/color.vim
-runtime plugins/status.vim
 runtime plugins/editing.vim
 runtime plugins/git.vim
-runtime plugins/completion.vim
 runtime plugins/navigation.vim
 runtime plugins/linting.vim
-runtime plugins/tree.vim
 runtime plugins/languages.vim
 
-call plug#end()
-
-call ncm2#register_source({'name' : 'terraform',
-            \ 'priority': 9,
-            \ 'subscope_enable': 1,
-            \ 'scope': ['hcl', 'terraform'],
-            \ 'mark': 'tf',
-            \ 'word_pattern': '[\w\-]+',
-            \ 'complete_pattern': '[^ *\t"{=$]\w*',
-            \ 'on_complete': ['ncm2#on_complete#omni', 'terraformcomplete#Complete'],
-            \ })
+call astral#end()
 
 " Mappings
 runtime map.vim

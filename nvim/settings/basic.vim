@@ -19,7 +19,7 @@ set history=1000                    " Size of command and search pattern history
 set undofile                        " Store undo history persistently on disk
 set undoreload=10000                " Save the whole buffer for undo
 set list                            " Show invisible characters
-set listchars=tab:→\ ,eol:¬,extends:❯,precedes:❮
+set listchars=tab:→\ ,eol:¬,trail:·,extends:❯,precedes:❮
 set shell=/usr/local/bin/zsh        " Override default shell
 set matchtime=3                     " Auto-highlight '%' match for 0.3s
 set showbreak=↪                     " Use this character to indicate wrapping
@@ -33,12 +33,6 @@ set title                           " Update the (terminal) window title
 set linebreak                       " Break lines at opportune characters
 set nojoinspaces                    " Don't use two spaces between sentences (gq)
 set dictionary=/usr/share/dict/words
-
-" Time out on key codes but not mappings.
-" Basically this makes terminal Vim work sanely.
-set notimeout
-set ttimeout
-set ttimeoutlen=10
 
 if has('mouse')
   set mouse=a

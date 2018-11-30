@@ -7,7 +7,7 @@ let g:lightline = {
   \   'colorscheme': 'one',
   \   'active': {
   \     'left': [ [ 'mode', 'paste' ], [ 'gitbranch' ], [ 'readonly', 'filename' ] ],
-  \     'right': [ [ 'percent' ], [ 'lineinfo' ], [ 'lint_err', 'lint_warn' ] ]
+  \     'right': [ [ 'percent' ], [ 'lineinfo' ], ['filetype'], [ 'lint_err', 'lint_warn' ] ]
   \   },
   \   'component_expand': {
   \     'lint_warn': 'LightlineLinterWarnings',
@@ -55,7 +55,7 @@ function! LightlineLinterErrors() abort
     let l:all_errors = l:counts.error + l:counts.style_error
     return l:counts.total == 0 ? '' : '✕ ' . printf('%d', all_errors)
 endfunction
-
+ℹ︎
 function! LightlineLinterOk() abort
     let l:counts = ale#statusline#Count(bufnr(''))
     return l:counts.total == 0 ? 'OK' : ''
