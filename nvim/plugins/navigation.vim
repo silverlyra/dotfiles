@@ -1,5 +1,5 @@
 " Navigation
 
-Plug 'cloudhead/neovim-fuzzy'
+Plug 'bosr/fzy.vim'
 nnoremap <silent> <leader>t :FuzzyOpen<CR>
 nnoremap <silent> <leader>g :FuzzyGrep<CR>

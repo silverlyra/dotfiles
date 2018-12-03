@@ -25,10 +25,12 @@ endif
 
 call astral#begin()
 
+Plane 'ui/statusline', {'colorscheme': 'one'}
+Plane 'ui/tree', {'position': 'right', 'follow': 0}
+
 Plane 'completion'
 Plane 'find'
-Plane 'ui/statusline', {'colorscheme': 'one'}
-Plane 'ui/tree', {'position': 'right', 'follow': 1}
+Plane 'git'
 
 Plane 'lang/go', {'gocode': '~/go/bin/gocode'}
 Plane 'lang/vim'
