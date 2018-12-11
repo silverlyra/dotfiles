@@ -25,12 +25,14 @@ endif
 
 call astral#begin()
 
-Plane 'ui/statusline', {'colorscheme': 'one'}
+Plane 'ui/map'
+Plane 'ui/statusline', {'colorscheme': 'one', 'tabline': 'buffers', 'tabline_close': 0}
 Plane 'ui/tree', {'position': 'right', 'follow': 0}
 
 Plane 'completion'
 Plane 'find'
 Plane 'git'
+Plane 'make'
 
 Plane 'lang/go', {'gocode': '~/go/bin/gocode'}
 Plane 'lang/vim'
@@ -39,7 +41,6 @@ runtime plugins/color.vim
 runtime plugins/editing.vim
 runtime plugins/git.vim
 runtime plugins/navigation.vim
-runtime plugins/linting.vim
 runtime plugins/languages.vim
 
 call astral#end()
