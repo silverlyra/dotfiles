@@ -28,6 +28,7 @@ let g:javascript_plugin_flow = 1
 let g:javascript_conceal_arrow_function       = '⇒'
 
 Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] }
+Plug 'jxnblk/vim-mdx-js'
 
 "
 " TypeScript
@@ -41,6 +42,11 @@ Plug 'mhartington/nvim-typescript', { 'for': 'typescript', 'do': './install.sh' 
 "
 
 Plug 'tpope/vim-markdown', { 'for': 'markdown'  }
+
+"
+" Sass
+"
+Plug 'cakebaker/scss-syntax.vim'
 
 "
 " JSON
