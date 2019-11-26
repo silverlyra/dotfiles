@@ -1,0 +1,2 @@
+(use-package ts
+	     :demand)
