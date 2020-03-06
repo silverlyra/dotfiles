@@ -1,0 +1,15 @@
+[user]
+name = Lyra Naeseth
+email = lyra@lyra.codes
+
+[github]
+user = silverlyra
+
+[push]
+default = upstream
+
+[advice]
+statusHits = false
+
+[credential]
+helper = osxkeychain

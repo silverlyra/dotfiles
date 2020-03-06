@@ -5,6 +5,7 @@ apply() {
   ln -fns "$src" "$dest"
 }
 
+apply gitconfig
 apply zsh/zplugins
 apply zsh/zmodules
 apply zsh/zshrc
