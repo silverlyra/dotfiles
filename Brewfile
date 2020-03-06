@@ -1,4 +1,5 @@
 tap "getantibody/tap"
+tap "github/gh"
 
 brew "antibody"
 brew "bat"
@@ -9,6 +10,7 @@ brew "fd"
 brew "fzf"
 brew "fzy"
 brew "git"
+brew "github/gh/gh"
 brew "go"
 brew "jq"
 brew "kubernetes-cli"
