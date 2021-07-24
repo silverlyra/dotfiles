@@ -15,7 +15,7 @@ gb() {
 # git commit --fixup (interactive)
 gcf() {
   local commits selection commit
-  commits=$(git log --pretty=format:'%h [%ad] %s' --date=relative master..HEAD) &&
+  commits=$(git log --pretty=format:'%h [%ad] %s' --date=relative $(gbb)..HEAD) &&
     selection=$(echo "$commits" | fzf --height=20% +m) &&
     commit=$(echo "$selection" | awk '{print $1}') &&
     if [[ -t 1 ]]; then git commit --fixup "$commit"; else echo $commit; fi
@@ -23,12 +23,12 @@ gcf() {
 
 # git new (simplified git start)
 gn() {
-  git checkout master && git pull --rebase --no-tags && git checkout -b "$1"
+  git checkout $(gbb) && git pull --rebase --no-tags && git checkout -b "$1"
 }
 
 # git roost (simplified git sync)
 gr() {
   local br
   br="$(git rev-parse --abbrev-ref HEAD)"
-  git checkout master && git pull --rebase --no-tags && git checkout "$br" && git rebase master
+  git checkout $(gbb) && git pull --rebase --no-tags && git checkout "$br" && git rebase $(gbb)
 }
