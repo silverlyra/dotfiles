@@ -4,13 +4,6 @@
 
 scriptencoding utf-8
 
-" Vim settings
-
-runtime settings/basic.vim
-runtime settings/completion.vim
-runtime settings/editing.vim
-runtime settings/filetypes.vim
-
 " Plugin management
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -22,6 +15,13 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
   augroup END
 endif
+
+" Vim settings
+
+runtime settings/basic.vim
+runtime settings/completion.vim
+runtime settings/editing.vim
+runtime settings/filetypes.vim
 
 call astral#begin()
 
