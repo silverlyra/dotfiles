@@ -59,4 +59,6 @@ alias greh='git reset HEAD'
 alias gre1='git reset HEAD~'
 
 alias gu='git push'
+alias guf='git push -f'
 alias guu='git push -u'
+alias gut='git push -u origin $(git branch --show-current)'
