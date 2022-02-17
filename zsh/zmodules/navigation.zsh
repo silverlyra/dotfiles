@@ -26,6 +26,23 @@ shortcut() {
 [[ ! -d "${HOME}/src" ]] || shortcut src "${HOME}/src"
 [[ ! -d "${HOME}/src/dotfiles" ]] || shortcut dots "${HOME}/src/dotfiles"
 
+# Use fd to find a directory, then cd to it
+cfd() {
+  declare -a args
+  if [[ "$#" -gt 0 ]]; then
+    args=("$@")
+  else
+    args=('-t' 'd')
+  fi
+
+  local dest
+  dest=$(fd "${args[@]}" | fzf --height=20% +m)
+
+  if [[ -n "$dest" ]]; then
+    cd "$dest"
+  fi
+}
+
 # If a command is issued that can’t be executed as a normal command,
 # and the command is the name of a directory, perform the cd command to that directory.
 setopt AUTO_CD

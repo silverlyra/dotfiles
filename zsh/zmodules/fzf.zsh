@@ -5,5 +5,9 @@ for fzfs in /opt/homebrew/opt/fzf/shell /usr/share/fzf; do
 
     # Key bindings
     source "${fzfs}/key-bindings.zsh"
+
+    break
   fi
 done
+
+unset fzfs
