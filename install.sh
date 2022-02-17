@@ -10,6 +10,7 @@ apply() {
 apply gitconfig
 apply zsh/zplugins
 apply zsh/zmodules
+apply zsh/zshenv
 apply zsh/zshrc
 
 mkdir -p ~/.config
