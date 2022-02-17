@@ -12,6 +12,7 @@ apply zsh/zplugins
 apply zsh/zmodules
 apply zsh/zshenv
 apply zsh/zshrc
+apply zsh/zlogin
 
 mkdir -p ~/.config
 ln -fns "$(pwd)/alacritty" ~/.config/alacritty
