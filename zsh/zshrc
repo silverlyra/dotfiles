@@ -1,3 +1,17 @@
+_add_to_path() {
+  local d="$1"
+
+  if [[ -d "$d" && ":$PATH:" != *":$d:"* ]]; then
+    PATH="$1${PATH:+":$PATH"}"
+  fi
+}
+
+_add_to_path /opt/homebrew/bin
+_add_to_path "${HOME}/go/bin"
+_add_to_path "${HOME}/.cargo/bin"
+_add_to_path "${HOME}/.local/bin"
+unset _add_to_path
+
 source <(antibody init)
 
 PURE_GIT_PULL=0 # disable automatic fetches by the shell prompt
@@ -5,7 +19,7 @@ PURE_GIT_PULL=0 # disable automatic fetches by the shell prompt
 export EDITOR=nvim
 export VISUAL="${EDITOR}"
 
-antibody bundle < "${HOME}/.zplugins"
+antibody bundle <"${HOME}/.zplugins"
 
 source "${HOME}/.zmodules/aliases.zsh"
 source "${HOME}/.zmodules/fzf.zsh"

@@ -1,6 +1,7 @@
 [user]
 name = Lyra Naeseth
 email = lyra@lyra.codes
+signingkey = CC9DCFB1BEA8B5D5
 
 [init]
 defaultBranch = main
@@ -11,8 +12,14 @@ user = silverlyra
 [push]
 default = upstream
 
+[tag]
+gpgSign = true
+
 [advice]
 statusHits = false
 
 [credential]
 helper = osxkeychain
+
+[include]
+path = .gitconfig.local

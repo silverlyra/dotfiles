@@ -18,7 +18,7 @@ gcf() {
   commits=$(git log --pretty=format:'%h [%ad] %s' --date=relative $(gbb)..HEAD) &&
     selection=$(echo "$commits" | fzf --height=20% +m) &&
     commit=$(echo "$selection" | awk '{print $1}') &&
-    if [[ -t 1 ]]; then git commit --fixup "$commit"; else echo $commit; fi
+    if [[ -t 1 ]]; then git commit -n --fixup "$commit"; else echo $commit; fi
 }
 
 # git new (simplified git start)

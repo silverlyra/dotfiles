@@ -10,6 +10,10 @@ alias v=nvim
 alias bj='bat -l json'
 alias by='bat -l yaml'
 
+jql() {
+  jq -C "$@" | less -R
+}
+
 # Git aliases
 
 alias ga='git add'
@@ -38,6 +42,9 @@ alias gl="git log --pretty='format:%C(yellow)%h %C(green)%ad %Creset%s%Cblue  [%
 alias gll='gl --stat'
 alias glm='gl $(gbb)..HEAD'
 alias glu='gl @{upstream}..HEAD'
+gL() {
+  gl --author "$(git config user.email)" $(gbb) -n 10
+}
 
 alias gp='git pull --rebase --no-tags'
 
