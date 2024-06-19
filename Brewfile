@@ -1,10 +1,8 @@
-tap "getantibody/tap"
-
-brew "antibody"
+brew "antidote"
 brew "bat"
 brew "cfssl"
 brew "deno"
-brew "exa"
+brew "eza"
 brew "fd"
 brew "fzf"
 brew "fzy"

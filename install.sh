@@ -24,8 +24,6 @@ apply alacritty .config/
 apply nvim .config/
 apply tmux .config/
 
-if ! command -v antibody >/dev/null; then
-  # Install Antibody (zsh plugin manager)
-  mkdir -p ~/.local/bin
-  curl -fsSL https://git.io/antibody | sh -s - -b ~/.local/bin
+if [[ ! -d "${ZDOTDIR:-"$HOME"}/.antidote" ]]; then
+  git clone --depth=1 https://github.com/mattmc3/antidote.git "${ZDOTDIR:-"$HOME"}/.antidote"
 fi

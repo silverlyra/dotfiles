@@ -12,14 +12,12 @@ _add_to_path "${HOME}/.cargo/bin"
 _add_to_path "${HOME}/.local/bin"
 unset _add_to_path
 
-source <(antibody init)
-
 PURE_GIT_PULL=0 # disable automatic fetches by the shell prompt
 
 export EDITOR=nvim
 export VISUAL="${EDITOR}"
 
-antibody bundle <"${HOME}/.zplugins"
+source "${HOME}/.zmodules/antidote.zsh"
 
 source "${HOME}/.zmodules/aliases.zsh"
 source "${HOME}/.zmodules/fzf.zsh"
